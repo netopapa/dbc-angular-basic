@@ -1,0 +1,8 @@
+<div id="user-form">
+    <h1>Formulário de usuário</h1>
+    <form #userForm="ngForm">
+        <input placeholder="Nome" type="text" [(ngModel)]="usuario.nome" name="name" required>
+        <input placeholder="CPF" type="text" [(ngModel)]="usuario.doc" name="cpf" minlength="11" required>
+        <button class="btn" type="submit" [disabled]="!userForm.valid" (click)="onSubmit()">OK</button>
+    </form>
+</div>
